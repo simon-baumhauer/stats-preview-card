@@ -1,0 +1,182 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+* {
+margin: 0;
+}
+
+
+body {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(233, 47%, 7%);
+  width: auto;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.container {
+  display: flex;
+  width: 1100px;
+  height: auto;
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.container-text{
+padding: 75px;
+width: 50%;
+height: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+  .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 8px 8px 0px;
+  background-color: hsl(277, 64%, 61%, 0.5);
+  }
+
+
+.image > img {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  border-radius: 0px 8px 8px 0px;
+}
+
+main {
+margin-bottom: 100px;
+}
+
+h1 {
+ font-size: 32px;
+ color: hsl(0, 0%, 100%);
+ margin-bottom: 40px;
+}
+
+h1 > span {
+  color: hsl(277, 64%, 61%)
+}
+
+main > p {
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-bottom: 20px;
+  line-height: 160%;
+}
+
+section {
+display: flex;
+flex-direction: row;
+}
+
+section > p {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 18px;
+}
+
+section > p > span {
+color: hsl(0, 0%, 100%);
+font-weight: bold;
+font-size: 24px;
+display: block;
+}
+
+section > p:nth-child(2n+0) {
+padding: 0px 50px;
+}
+
+@media (max-width: 375px) {
+
+  .container {
+      display: flex;
+      width: 85%;
+      height: auto;
+      background-color: hsl(244, 38%, 16%);
+      box-sizing: border-box;
+      border-radius: 8px;
+      flex-direction: column-reverse;
+      text-align: center;
+
+    }
+
+    .image {
+      width: 100%;
+      height: 30vh;
+      position: relative;
+    }
+
+
+    .image > img {
+      min-height: 100%;
+      max-height: 100%;
+      border-radius: 8px 8px 0px 0px;
+      background-size: cover;
+    }
+
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px 8px 0px 0px;
+      background-color: hsl(277, 64%, 61%, 0.5);
+    }
+
+    .container-text{
+    padding: 10px 10px 20px 10px;
+    width: auto;
+    height: 50%;
+    }
+
+    h1 {
+     margin: 15px 0px 20px 0px;
+    }
+
+    main {
+    margin-bottom: 15px;
+    }
+
+    main > p {
+      padding: 0px 30px;
+      margin-bottom: 0px;
+    }
+
+    section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    }
+
+    section > p {
+
+    }
+
+    section > p:nth-child(2n+0) {
+    padding: 30px 0px;
+    }
+
+}
